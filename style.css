@@ -1,0 +1,120 @@
+/* html, body {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding-bottom: 10px;
+    background-image: url('./assets/images/morty.jpg');
+  }
+
+  .description{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .container{ 
+    display: grid;
+    background: #0a0a0659;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+  }
+
+  .containerIMG{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  button{
+    width: 200px;
+    height: 50px;
+    background: rgb(54 53 53 / 12%);
+    color: white;
+    border-radius: 11px;
+  }
+
+  button:hover{
+    background: #7A7D23;
+    cursor: pointer;
+  }
+
+  .footer{
+    text-align: center;
+  }
+
+  img{
+    width: 100%;
+  } */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    max-width: 300px;
+    outline: 2px #7A7D23 solid;
+    display: grid;
+    place-items: center;
+    background: #212F3D;
+    border-radius: 3px;
+  }
+
+  .title {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    background: #273746;
+    color: white;
+    border-radius: 5px;
+    border: 2px black solid;
+  }
+
+  .containerIMG {
+    max-width: 250px;
+  }
+
+  img{
+    border-radius: 5px;
+    border: 2px black solid;
+  }
+
+  .description{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 250px;
+  }
+
+  .footer{
+    padding: 10px 0 10px 0;
+  }
+
+  button{
+    width: 200px;
+    height: 50px;
+    background: #4D5656;
+    border: 2px black solid;
+    border-radius: 3px;
+    color: white;
+  }
+
+  button:hover{
+    border: 2px #7A7D23 solid;
+    cursor: pointer;
+  }
+}

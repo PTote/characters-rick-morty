@@ -1,5 +1,5 @@
 const img = document.getElementById("imagen");
-const spanName = document.getElementById("nameImg")
+const spanName = document.getElementById("nameImg");
 const API = "https://rickandmortyapi.com/api/character";
 
 const getRandomValue = () => {
@@ -10,32 +10,27 @@ let value = getRandomValue();
 
 const changeValue = () => {
   value = getRandomValue();
-  generateImage(value);
+  getData(API, value);
 };
 
-const fetchData = async (url) => {
+const fetchData = async (urlAPI) => {
+  const response = await fetch(urlAPI);
+  return await response.json();
+};
+
+const getData = async (urlAPI, value) => {
   try {
-    const response = await fetch(url);
-    return await response.json();
-  } catch (error) {
-    throw new Error("Something it´s wrong");
-  }
-};
-
-
-const generateImage = (value) => {
-  fetchData(`${API}/${value}`)
-  .then((data) => {
-    const { image, name } = data;
-    img?.setAttribute("src", image);
+    const {image, name} = await fetchData(`${urlAPI}/${value}`);
+    
+    img?.setAttribute('src', image );
 
     if(spanName){
       spanName.innerHTML = `Nombre de personaje: ${name}`;
     }
-  })
-  .catch((error) => console.log(error));
+
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-
-
-generateImage(value);
+getData(API, value);

@@ -5,51 +5,16 @@
     place-items: center;
     padding-bottom: 10px;
     background-image: url('./assets/images/morty.jpg');
-  }
-
-  .description{
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .container{ 
-    display: grid;
-    background: #0a0a0659;
-    border-radius: 10px;
-    padding: 20px;
-    color: white;
-  }
-
-  .containerIMG{
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  button{
-    width: 200px;
-    height: 50px;
-    background: rgb(54 53 53 / 12%);
-    color: white;
-    border-radius: 11px;
-  }
-
-  button:hover{
-    background: #7A7D23;
-    cursor: pointer;
-  }
-
-  .footer{
-    text-align: center;
-  }
-
-  img{
-    width: 100%;
   } */
 
 html,
 body {
   margin: 0;
   height: 100%;
+  background-image: url("./assets/images/morty-mobile.jpg");
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
 }
 
 body {
@@ -60,61 +25,146 @@ body {
 
 img {
   width: 100%;
+  border-radius: 5px;
+  border: 2px black solid;
 }
 
-@media screen and (max-width: 600px) {
+.description {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 250px;
+}
+
+.footer {
+  padding: 10px 0 10px 0;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background: #2737466b;
+  border: 2px black solid;
+  border-radius: 3px;
+  color: white;
+}
+
+button:hover {
+  border: 2px #7a7d23 solid;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 300px;
+  outline: 2px black solid;
+  display: grid;
+  place-items: center;
+  background: #212f3d6e;
+  border-radius: 3px;
+}
+
+.container:hover {
+  border: 3px #7a7d23 solid;
+}
+
+.title {
+  margin: 10px 0 10px 0;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  background: #2737466b;
+  color: white;
+  border-radius: 5px;
+  border: 2px black solid;
+}
+
+.containerIMG {
+  max-width: 250px;
+}
+
+@media screen and (min-width: 400px) {
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    background-image: url("./assets/images/morty-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
   .container {
     width: 100%;
-    max-width: 300px;
-    outline: 2px #7A7D23 solid;
+    max-width: 500px;
+    outline: 2px black solid;
     display: grid;
     place-items: center;
-    background: #212F3D;
+    background: #212f3d6e;
     border-radius: 3px;
+  }
+
+  .container:hover {
+    border: 3px #7a7d23 solid;
   }
 
   .title {
+    outline: 0px black solid;
     margin: 10px 0 10px 0;
     width: 100%;
-    max-width: 250px;
+    max-width: 450px;
     text-align: center;
-    background: #273746;
+    border-radius: 3px;
+    background: #2737466b;
     color: white;
-    border-radius: 5px;
-    border: 2px black solid;
   }
 
   .containerIMG {
-    max-width: 250px;
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    background-image: url("./assets/images/morty.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 
-  img{
-    border-radius: 5px;
-    border: 2px black solid;
-  }
-
-  .description{
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    max-width: 250px;
-  }
-
-  .footer{
-    padding: 10px 0 10px 0;
-  }
-
-  button{
-    width: 200px;
-    height: 50px;
-    background: #4D5656;
-    border: 2px black solid;
+  .container {
+    width: 100%;
+    max-width: 500px;
+    outline: 2px black solid;
+    display: grid;
+    place-items: center;
+    background: #212f3d6e;
     border-radius: 3px;
+  }
+
+  .container:hover {
+    border: 3px #7a7d23 solid;
+  }
+
+  .title {
+    outline: 0px black solid;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2737466b;
     color: white;
   }
 
-  button:hover{
-    border: 2px #7A7D23 solid;
-    cursor: pointer;
+  .containerIMG {
+    width: 100%;
+    max-width: 450px;
   }
 }
